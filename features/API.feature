@@ -56,3 +56,9 @@ Escenario: Eliminar varios datos a una API
       | 32 |
       | 28 |
   Entonces la respuesta debería tener un código de estado 200
+
+@csv
+Escenario: Enviar datos de un csv a una API
+  Cuando Leo el archivo csv
+  Entonces agrego productos a la API con los siguientes parámetros:
+    | title                    | description           | price |
